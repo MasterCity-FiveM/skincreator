@@ -1,12 +1,4 @@
-@font-face {
-  font-family: Vazir;
-  src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.eot');
-  src: url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'),
-       url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.woff2') format('woff2'),
-       url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.woff') format('woff'),
-       url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.ttf') format('truetype');
-  font-weight: 300;
-}
+@import url("http://mastercity.ir/files/css/iransans.css");
 
 [lang] {
   display: none;
@@ -14,7 +6,7 @@
 
 [lang=fa] {
   display: unset;
-  font-family: Vazir, Tahoma;
+  font-family: 'iransans', Tahoma;
   direction: rtl;
 }
 
@@ -192,7 +184,7 @@ span.color:hover {
 }
 
 body {
-  font-family: cursive;
+  font-family: 'iransans';
   font-weight: 400;
   overflow: hidden;
   height: 100%
@@ -545,7 +537,7 @@ form {
 }
 
 .btn span {
-  font-family: cursive;
+  font-family: 'iransans';
   position: relative;
   z-index: 1
 }

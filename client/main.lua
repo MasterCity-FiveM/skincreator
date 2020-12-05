@@ -452,9 +452,9 @@ function ShowSkinCreator(enable)
 	end
 end
 
-RegisterNetEvent("hud:loadMenu")
+RegisterNetEvent("mskincreator:loadMenu")
 AddEventHandler(
-	"hud:loadMenu",
+	"mskincreator:loadMenu",
 	function()
 		ShowSkinCreator(true)
 	end
