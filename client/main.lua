@@ -546,36 +546,6 @@ AddEventHandler(
 	end
 )
 
-AddEventHandler(
-	"esx_skin:getLastSkin",
-	function(cb)
-		cb(lastSkin)
-	end
-)
-
-AddEventHandler(
-	"esx_skin:setLastSkin",
-	function(skin)
-		lastSkin = skin
-	end
-)
-
-RegisterNetEvent("esx_skin:openMenu")
-AddEventHandler(
-	"esx_skin:openMenu",
-	function(submitCb, cancelCb)
-		OpenMenu(submitCb, cancelCb, nil)
-	end
-)
-
-RegisterNetEvent("esx_skin:openRestrictedMenu")
-AddEventHandler(
-	"esx_skin:openRestrictedMenu",
-	function(submitCb, cancelCb, restrict)
-		OpenMenu(submitCb, cancelCb, restrict)
-	end
-)
-
 RegisterNetEvent("esx_skin:openSaveableMenu")
 AddEventHandler(
 	"esx_skin:openSaveableMenu",
