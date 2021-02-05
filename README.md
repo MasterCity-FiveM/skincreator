@@ -3,6 +3,7 @@
 **Do not use these scripts if you are not comfortable with development.**
 **If you have some issues with code, ask the community on the official [FiveM's topic](https://forum.fivem.net/t/preview-enhanced-hud/634217).**
 
+
 ## How to install
 
 * Import ```outfits.sql``` to your database
