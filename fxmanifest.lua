@@ -13,16 +13,6 @@ files {
     'ui/js/*',
 }
 
--- Server Scripts
-server_scripts {
-    '@mysql-async/lib/MySQL.lua',     -- MySQL init
-    '@es_extended/locale.lua',
-    'locales/en.lua',
-    'locales/fr.lua',
-    'config.lua',
-    'server/main.lua',
-}
-
 -- Client Scripts
 client_scripts {
 	'@es_extended/locale.lua',
