@@ -25,6 +25,16 @@ Citizen.CreateThread(
 	end
 )
 
+RegisterNetEvent('masterking32:closeAllUI')
+AddEventHandler('masterking32:closeAllUI', function()
+	SetNuiFocus(false, false)
+	SendNUIMessage(
+		{
+			openSkinCreator = false
+		}
+	)
+end)
+
 ------------------------------------------------------------------
 --                          NUI
 ------------------------------------------------------------------
