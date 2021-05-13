@@ -8,7 +8,7 @@ local zoom = "visage" -- Define which tab is shown first (Default: Head)
 local isCameraActive, lastSkin
 local FirstSpawn = true
 local PlayerLoaded = false
-local PrevHat, PrevGlasses, PrevEars, PrevGender, PrevPants, PrevShoes, PrevWatches
+local PrevHat, PrevGlasses, PrevEars, PrevGender, PrevPants, PrevShoes, PrevWatches, PrevTShirt, PrevTorsto, PrevArms
 local face
 
 Citizen.CreateThread(
@@ -38,7 +38,7 @@ end)
 ------------------------------------------------------------------
 --                          NUI
 ------------------------------------------------------------------
-
+local SkinMixData, ShapeMixData = 0.5, 0.5
 RegisterNUICallback(
 	"updateSkin",
 	function(data)
@@ -48,7 +48,8 @@ RegisterNUICallback(
 		dad = tonumber(data.dad)
 		mum = tonumber(data.mum)
 		gender = tonumber(data.gender)
-		skin = tonumber(data.skin)
+		skin = tonumber(data.skinMix) / 10
+		face = tonumber(data.shapeMix) / 10
 		eyecolor = tonumber(data.eyecolor)
 		acne = tonumber(data.acne)
 		skinproblem = tonumber(data.skinproblem)
@@ -69,20 +70,50 @@ RegisterNUICallback(
 		glasses_texture = tonumber(data.glasses_texture)
 		ears = tonumber(data.ears)
 		ears_texture = tonumber(data.ears_texture)
-		tops_torso_a = tonumber(data.tops_torso_a)
-		tops_torso_b = tonumber(data.tops_torso_b)
-		tops_neck_a = tonumber(data.tops_neck_a)
-		tops_neck_b = tonumber(data.tops_neck_b)
-		tops_undershirt_a = tonumber(data.tops_undershirt_a)
-		tops_undershirt_b = tonumber(data.tops_undershirt_b)
-		tops_hands = tonumber(data.tops_hands)
+		
+		tshirts_1 = tonumber(data.tshirts_1)
+		tshirts_2 = tonumber(data.tshirts_2)
+		
+		torso_1 = tonumber(data.torso_1)
+		torso_2 = tonumber(data.torso_2)
+		
+		arms_1 = tonumber(data.arms_1)
+		arms_2 = tonumber(data.arms_2)
+		
+		nose_1 = ((tonumber(data.nose_1) - 10) / 10)
+		nose_2 = ((tonumber(data.nose_2) - 10) / 10)
+		nose_3 = ((tonumber(data.nose_3) - 10) / 10)
+		nose_4 = ((tonumber(data.nose_4) - 10) / 10)
+		nose_5 = ((tonumber(data.nose_5) - 10) / 10)
+		nose_6 = ((tonumber(data.nose_6) - 10) / 10)
+		eyebrows_5 = ((tonumber(data.eyebrows_5) - 10) / 10)
+		eyebrows_6 = ((tonumber(data.eyebrows_6) - 10) / 10)
+		cheeks_1 = ((tonumber(data.cheeks_1) - 10) / 10)
+		cheeks_2 = ((tonumber(data.cheeks_2) - 10) / 10)
+		cheeks_3 = ((tonumber(data.cheeks_3) - 10) / 10)
+		eye_open = ((tonumber(data.eye_open) - 10) / 10)
+		lips_thick = ((tonumber(data.lips_thick) - 10) / 10)
+		jaw_1 = ((tonumber(data.jaw_1) - 10) / 10)
+		jaw_2 = ((tonumber(data.jaw_2) - 10) / 10)
+		chin_height = ((tonumber(data.chin_height) - 10) / 10)
+		chin_lenght = ((tonumber(data.chin_lenght) - 10) / 10)
+		chin_width = ((tonumber(data.chin_width) - 10) / 10)
+		chin_hole = ((tonumber(data.chin_hole) - 10) / 10)
+		neck_thick = ((tonumber(data.neck_thick) - 10) / 10)
+				
 		pants = tonumber(data.pants)
 		pants_texture = tonumber(data.pants_texture)
 		shoes = tonumber(data.shoes)
 		shoes_texture = tonumber(data.shoes_texture)
 		watches = tonumber(data.watches)
 		watches_texture = tonumber(data.watches_texture)
-
+		
+		if freckle == 0 then
+			moles_2 = 0
+		else
+			moles_2 = 10
+		end
+		
 		if (v == true) then
 			local ped = playerPed
 			local hand = GetPedDrawableVariation(ped, 3)
@@ -114,7 +145,7 @@ RegisterNUICallback(
 				["complexion_1"] = skinproblem,
 				["complexion_2"] = 1,
 				["moles_1"] = freckle,
-				["moles_2"] = 1,
+				["moles_2"] = moles_2,
 				["age_1"] = wrinkle,
 				["age_2"] = wrinkleopacity,
 				["eyebrows_1"] = eyebrow,
@@ -146,9 +177,34 @@ RegisterNUICallback(
 				["ears_1"] = prop_earrings,
 				["ears_2"] = prop_earrings_text,
 				["watches_1"] = prop_watches,
-				["watches_2"] = prop_watches_text
+				["watches_2"] = prop_watches_text,
+				["bproof_1"] = -1,
+				["bproof_2"] = -1,
+				["mom"] = mum,
+				["dad"] = dad,
+				["blemishes_1"] = acne,
+				["blemishes_2"] = 10,
+				["nose_1"] = nose_1,
+				["nose_2"] = nose_2,
+				["nose_3"] = nose_3,
+				["nose_4"] = nose_4,
+				["nose_5"] = nose_5,
+				["nose_6"] = nose_6,
+				["eyebrows_5"] = eyebrows_5,
+				["eyebrows_6"] = eyebrows_6,
+				["cheeks_1"] = cheeks_1,
+				["cheeks_2"] = cheeks_2,
+				["cheeks_3"] = cheeks_3,
+				["eye_open"] = eye_open,
+				["lips_thick"] = lips_thick,
+				["jaw_1"] = jaw_1,
+				["jaw_2"] = jaw_2,
+				["chin_height"] = chin_height,
+				["chin_lenght"] = chin_lenght,
+				["chin_width"] = chin_width,
+				["chin_hole"] = chin_hole,
+				["neck_thick"] = neck_thick,
 			}
-
 			TriggerServerEvent("esx_skin:save", skin_data)
 			TriggerEvent('skinchanger:loadSkin', skin_data)
 			Citizen.Wait(1000)
@@ -160,18 +216,37 @@ RegisterNUICallback(
 
 				if gender == 0 then
 					TriggerEvent("skinchanger:change", "sex", 0)
-					face = dad
 				else
 					TriggerEvent("skinchanger:change", "sex", 1)
-					face = mum
 				end
 			end
-
 			-- Face
 			--TO DO : Add dadmumpercent into skinchanger
 			--SetPedHeadBlendData			(playerPed, face, face, face, skin, skin, skin, dadmumpercent * 0.1, dadmumpercent * 0.1, 1.0, true)
-			SetPedHeadBlendData(playerPed, face, face, face, skin, skin, skin, 1.0, 1.0, 1.0, true)
-
+			--SetPedHeadBlendData(playerPed, face, face, face, skin, skin, skin, 1.0, 1.0, 1.0, true)
+			SetPedHeadBlendData(playerPed, mum, dad, nil, mum, dad, nil, face, skin, nil, true)
+			
+			SetPedFaceFeature(playerPed, 0, nose_1)
+			SetPedFaceFeature(playerPed, 1, nose_2)
+			SetPedFaceFeature(playerPed, 2, nose_3)
+			SetPedFaceFeature(playerPed, 3, nose_4)
+			SetPedFaceFeature(playerPed, 4, nose_5)
+			SetPedFaceFeature(playerPed, 5, nose_6)
+			SetPedFaceFeature(playerPed, 6, eyebrows_5)
+			SetPedFaceFeature(playerPed, 7, eyebrows_6)
+			SetPedFaceFeature(playerPed, 8, cheeks_1)
+			SetPedFaceFeature(playerPed, 9, cheeks_2)
+			SetPedFaceFeature(playerPed, 10, cheeks_3)
+			SetPedFaceFeature(playerPed, 11, eye_open)
+			SetPedFaceFeature(playerPed, 12, lips_thick)
+			SetPedFaceFeature(playerPed, 13, jaw_1)
+			SetPedFaceFeature(playerPed, 14, jaw_2)
+			SetPedFaceFeature(playerPed, 15, chin_height)
+			SetPedFaceFeature(playerPed, 16, chin_lenght)
+			SetPedFaceFeature(playerPed, 17, chin_width)
+			SetPedFaceFeature(playerPed, 18, chin_hole)
+			SetPedFaceFeature(playerPed, 19, neck_thick)
+			
 			SetPedEyeColor(playerPed, eyecolor)
 			if acne == 0 then
 				SetPedHeadOverlay(playerPed, 0, acne, 0.0)
@@ -268,13 +343,6 @@ RegisterNUICallback(
 				SetPedPropIndex(playerPed, 2, ears, ears_texture, 2)
 			end
 
-			-- Keep these 4 variations together.
-			-- It avoids empty arms or noisy clothes superposition
-			SetPedComponentVariation(playerPed, 7, tops_neck_a, tops_neck_b, 2) -- Neck
-			SetPedComponentVariation(playerPed, 8, tops_undershirt_a, tops_undershirt_b, 2) -- Undershirt
-			SetPedComponentVariation(playerPed, 11, tops_torso_a, tops_torso_b, 2) -- Torso 2
-			SetPedComponentVariation(playerPed, 3, tops_hands, 0, 2)
-
 			if PrevPants ~= pants then
 				PrevPants = pants
 				pants_texture = 0
@@ -314,6 +382,7 @@ RegisterNUICallback(
 					}
 				)
 			end
+			
 
 			SetPedComponentVariation(playerPed, 6, shoes, shoes_texture, 2)
 
@@ -342,6 +411,69 @@ RegisterNUICallback(
 				SetPedPropIndex(playerPed, 6, watches, watches_texture, 2)
 			end
 
+			if PrevTShirt ~= tshirts_1 then
+				PrevTShirt = tshirts_1
+				tshirts_2 = 0
+				local maxTShirts
+				if tshirts_1 == 0 then
+					maxTShirts = 0
+				else
+					maxTShirts = GetNumberOfPedTextureVariations(playerPed, 6, tshirts_1) - 1
+				end
+				SendNUIMessage(
+					{
+						type = "updateMaxVal",
+						classname = "tshirts_2",
+						defaultVal = 0,
+						maxVal = maxTShirts
+					}
+				)
+			end
+
+			SetPedComponentVariation(playerPed, 8, tshirts_1, tshirts_2, 2)
+			
+			if PrevTorsto ~= torso_1 then
+				PrevTorsto = torso_1
+				torso_2 = 0
+				local maxTShirts
+				if torso_1 == 0 then
+					maxTShirts = 0
+				else
+					maxTShirts = GetNumberOfPedTextureVariations(playerPed, 6, torso_1) - 1
+				end
+				SendNUIMessage(
+					{
+						type = "updateMaxVal",
+						classname = "torso_2",
+						defaultVal = 0,
+						maxVal = maxTShirts
+					}
+				)
+			end
+
+			SetPedComponentVariation(playerPed, 11, torso_1, torso_2, 2)
+			
+			if PrevArms ~= arms_1 then
+				PrevArms = arms_1
+				arms_2 = 0
+				local maxTShirts
+				if arms_1 == 0 then
+					maxTShirts = 0
+				else
+					maxTShirts = GetNumberOfPedTextureVariations(playerPed, 6, arms_1) - 1
+				end
+				SendNUIMessage(
+					{
+						type = "updateMaxVal",
+						classname = "arms_2",
+						defaultVal = 0,
+						maxVal = maxTShirts
+					}
+				)
+			end
+
+			SetPedComponentVariation(playerPed, 3, arms_1, arms_2, 2)
+			
 			-- Unused yet
 			-- These presets will be editable in V2 release
 			SetPedHeadOverlay(playerPed, 4, 0, 0.0) -- Lipstick
@@ -399,7 +531,7 @@ function ShowSkinCreator(enable)
 		"skinchanger:getData",
 		function(components, maxVals)
 			local _components = {}
-
+				
 			for i = 1, #components, 1 do
 				_components[i] = components[i]
 			end
@@ -432,48 +564,10 @@ function ShowSkinCreator(enable)
 		end
 	)
 	isCameraActive = true
-	SetNuiFocus(enable, enable)
-	SendNUIMessage(
-		{
-			openSkinCreator = enable
-		}
-	)
-
-	for index, data in ipairs(elements) do
-		local name, Valmax
-
-		for key, value in pairs(data) do
-			if key == "name" then
-				name = value
-			end
-			if key == "max" then
-				Valmax = value
-			end
-		end
-
-		SendNUIMessage(
-			{
-				type = "updateMaxVal",
-				classname = name,
-				defaultVal = 0,
-				maxVal = Valmax
-			}
-		)
-	end
-end
-
-RegisterNetEvent("mskincreator:loadMenu")
-AddEventHandler(
-	"mskincreator:loadMenu",
-	function()
-		ShowSkinCreator(true)
-	end
-)
-
--- Disable Controls
-Citizen.CreateThread(
-	function()
-		while true do
+	
+	-- Disable Controls
+	Citizen.CreateThread(function()
+		while isCameraActive do
 			Citizen.Wait(0)
 			if isCameraActive == true then
 				DisableControlAction(2, 14, true)
@@ -518,8 +612,46 @@ Citizen.CreateThread(
 				Citizen.Wait(500)
 			end
 		end
+	end)
+	
+	SetNuiFocus(enable, enable)
+	SendNUIMessage(
+		{
+			openSkinCreator = enable
+		}
+	)
+
+	for index, data in ipairs(elements) do
+		local name, Valmax
+
+		for key, value in pairs(data) do
+			if key == "name" then
+				name = value
+			end
+			if key == "max" then
+				Valmax = value
+			end
+		end
+
+		SendNUIMessage(
+			{
+				type = "updateMaxVal",
+				classname = name,
+				defaultVal = 0,
+				maxVal = Valmax
+			}
+		)
+	end
+end
+
+RegisterNetEvent("mskincreator:loadMenu")
+AddEventHandler(
+	"mskincreator:loadMenu",
+	function()
+		ShowSkinCreator(true)
 	end
 )
+
 
 AddEventHandler(
 	"esx:onPlayerSpawn",

@@ -1,9 +1,8 @@
 <html>
 
-<head>
-  <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <!--<script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
+<head> 
+  <title> MasterkinG32 CharMenu Edition</title>
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href="css/tabs.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
@@ -45,13 +44,13 @@
                 </div>
                 <div class="type-img">
                   <label class="genderLbl" for="M">
-                    <input type="radio" name="gender" class="gender" value="0" id="M" checked onclick="myFunction(0)"/>
+                    <input type="radio" name="gender" class="gender" value="0" id="M" checked"/>
                     <div class="Genderimg img">
                       <i class="fas fa-male"></i>
                     </div>
                   </label>
                   <label class="genderLbl" for="F">
-                    <input type="radio" name="gender" class="gender" value="1" id="F" onclick="myFunction(1)"/>
+                    <input type="radio" name="gender" class="gender" value="1" id="F"/>
                     <div class="Genderimg img">
                       <i class="fas fa-female"></i>
                     </div>
@@ -60,7 +59,7 @@
               </div>
               <div class="input" id="genderMale">
                 <div class="label" id="maleFaces">
-                  <span lang="fa">صورت</span>
+                  <span lang="fa">پدر</span>
                   <span lang="en">Face</span>
                 </div>
                 <div class="type-img">
@@ -212,7 +211,7 @@
               </div>
               <div class="input" id="genderFemale">
                 <div class="label" id="femaleFaces">
-                  <span lang="fa">صورت</span>
+                  <span lang="fa">مادر</span>
                   <span lang="en">Face</span>
                 </div>
                 <div class="type-img">
@@ -350,6 +349,30 @@
                   </label>
                 </div>
               </div>
+			  
+              <div class="input">
+                <div class="label" id="acneHeader">
+                  <span lang="fa">رنگ پوست (پدر - مادر)</span>
+                </div>
+                <div class="label-value" data-legend="10"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="5" type="range" class="skinMix" min="0" max="10" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label" id="acneHeader">
+                  <span lang="fa">شباهت صورت (پدر - مادر)</span>
+                </div>
+                <div class="label-value" data-legend="10"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="5" type="range" class="shapeMix" min="0" max="10" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
               <div class="input">
                 <div class="label" id="eyeColor">
                   <span lang="fa">رنگ چشم</span>
@@ -396,33 +419,253 @@
               </div>
             </div>
             <div class="group">
+				
+              <div class="input">
+                <div class="label" id="acneHeader">
+                  <span lang="fa">عرض بینی</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="nose_1" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">ارتفاع قله بینی</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="nose_2" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">طول قله بینی</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="nose_3" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">استخوان بالای بینی</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="nose_4" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">کاهش قله بینی</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="nose_5" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">پیچ خوردگی استخوان بینی</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="nose_6" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">عمق پیشانی</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="eyebrows_5" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">قد پیشانی</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="eyebrows_6" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">قد استخوان گونه</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="cheeks_1" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">عرض استخوان گونه</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="cheeks_2" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">عرض گونه</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="cheeks_3" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">باز بودن چشم</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="eye_open" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">ضخامت لب ها</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="lips_thick" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">عرض فک</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="jaw_1" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">طول فک</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="jaw_2" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">ارتفاع چانه</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="chin_height" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">طول چانه</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="chin_lenght" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">عرض چانه</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="chin_width" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">گودی چانه</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="chin_hole" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+              <div class="input">
+                <div class="label">
+                  <span lang="fa">ضخامت گردن</span>
+                </div>
+                <div class="label-value" data-legend="20"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="10" type="range" class="neck_thick" min="0" max="20" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+			  
+			</div>
+            <div class="group">
               <h2 id="skinHeader">
                 <span lang="fa">پوست</span>
                 <span lang="en">Skin</span>
               </h2>
-              <div class="input">
-                <div class="label" id="skinColor">
-                  <span lang="fa">رنگ پوست</span>
-                </div>
-                <div class="type-radio">
-                  <label for="p1">
-                    <input type="radio" name="peaucolor" class="peaucolor" value="12" id="p1" checked />
-                    <span class="color" data-color="#ecc8ae"></span>
-                  </label>
-                  <label for="p2">
-                    <input type="radio" name="peaucolor" class="peaucolor" value="25" id="p2" />
-                    <span class="color" data-color="#ce9874"></span>
-                  </label>
-                  <label for="p3">
-                    <input type="radio" name="peaucolor" class="peaucolor" value="19" id="p3" />
-                    <span class="color" data-color="#925a41"></span>
-                  </label>
-                  <label for="p4">
-                    <input type="radio" name="peaucolor" class="peaucolor" value="14" id="p4" />
-                    <span class="color" data-color="#4e3a26"></span>
-                  </label>
-                </div>
-              </div>
               <div class="input">
                 <div class="label" id="acneHeader">
                   <span lang="fa">آکنه</span>
@@ -491,10 +734,10 @@
                 <div class="label" id="hairstyle">
                   <span lang="fa">مدل مو</span>
                 </div>
-                <div class="label-value" data-legend="74"></div>
+                <div class="label-value" data-legend="78"></div>
                 <div class="type-range">
                   <a href="#" class="arrow arrow-left">&nbsp;</a>
-                  <input value="0" type="range" class="hair" min="0" max="74" />
+                  <input value="0" type="range" class="hair" min="0" max="78" />
                   <a href="#" class="arrow arrow-right">&nbsp;</a>
                 </div>
               </div>
@@ -719,53 +962,7 @@
               </h2>
               <div class="vetements-value" data-legend="">0</div>
               <ul class="chapeaux" data-link="Head">
-                <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
-                <li order="0" data="0" class="active">
-                  <span lang="fa">بدون کلاه</span>
-                </li>
-                <li order="1" data="2">
-                  <span lang="fa">Bonnet</span>
-                </li>
-                <li order="2" data="7">
-                  <span lang="fa">Beret</span>
-                </li>
-                <li order="3" data="13">
-                  <span lang="fa">Cowboy hat</span>
-                </li>
-                <li order="4" data="14">
-                  <span lang="fa">Bandana</span>
-                </li>
-                <li order="5" data="15">
-                  <span lang="fa">Headphones</span>
-                </li>
-                <li order="6" data="20">
-                  <span lang="fa">Bob trier</span>
-                </li>
-                <li order="7" data="21">
-                  <span lang="fa">Holiday hat</span>
-                </li>
-                <li order="8" data="25">
-                  <span lang="fa">Mafieu hat</span>
-                </li>
-                <li order="9" data="26">
-                  <span lang="fa">Bowler hat</span>
-                </li>
-                <li order="10" data="27">
-                  <span lang="fa">Top hat</span>
-                </li>
-                <li order="11" data="34">
-                  <span lang="fa">wool cap</span>
-                </li>
-                <li order="12" data="55">
-                  <span lang="fa">Broker cap</span>
-                </li>
-                <li order="13" data="76">
-                  <span lang="fa">Vapid cap</span>
-                </li>
-                <li order="14" data="96">
-                  <span lang="fa">Casquette Sand Castle</span>
-                </li>
-                <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                
               </ul>
               <div class="input">
                 <div class="label">
@@ -785,41 +982,6 @@
               </h2>
               <div class="vetements-value" data-legend="">0</div>
               <ul class="lunettes" data-link="Head">
-                <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
-                <li order="0" data="0" class="active">
-                  <span lang="fa">بدون عینک</span>
-                </li>
-                <li order="2" data="2">
-                  <span lang="fa">Large black</span>
-                </li>
-                <li order="3" data="3">
-                  <span lang="fa">Semi-open (sun)</span>
-                </li>
-                <li order="4" data="4">
-                  <span lang="fa">Black open semie</span>
-                </li>
-                <li order="5" data="5">
-                  <span lang="fa">Aviator (sun)</span>
-                </li>
-                <li order="7" data="7">
-                  <span lang="fa">Wayfarer (sun)</span>
-                </li>
-                <li order="8" data="8">
-                  <span lang="fa">Zoo (sun)</span>
-                </li>
-                <li order="9" data="9">
-                  <span lang="fa">Sport (sun)</span>
-                </li>
-                <li order="10" data="10">
-                  <span lang="fa">Mountain (sun)</span>
-                </li>
-                <li order="11" data="11">
-                  <span lang="fa">Nerd</span>
-                </li>
-                <li order="12" data="11">
-                  <span lang="fa">Ski (sun)</span>
-                </li>
-                <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
               </ul>
               <div class="input">
                 <div class="label">
@@ -839,56 +1001,7 @@
               </h2>
               <div class="vetements-value" data-legend="">0</div>
               <ul class="oreilles" data-link="Head">
-                <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
-                <li order="0" data="0" class="active">
-                  <span lang="fa">بدون گوشواره</span>
-                </li>
-                <li order="1" data="3">
-                  <span lang="fa">Loop (left)</span>
-                </li>
-                <li order="2" data="4">
-                  <span lang="fa">Buckle (right)</span>
-                </li>
-                <li order="3" data="5">
-                  <span lang="fa">Loop</span>
-                </li>
-                <li order="4" data="9">
-                  <span lang="fa">Diamond (right)</span>
-                </li>
-                <li order="5" data="10">
-                  <span lang="fa">Diamond (left)</span>
-                </li>
-                <li order="6" data="11">
-                  <span lang="fa">Diamond</span>
-                </li>
-                <li order="7" data="18">
-                  <span lang="fa">Square (left)</span>
-                </li>
-                <li order="8" data="19">
-                  <span lang="fa">Square (right)</span>
-                </li>
-                <li order="9" data="20">
-                  <span lang="fa">Square</span>
-                </li>
-                <li order="10" data="27">
-                  <span lang="fa">Spade (left)</span>
-                </li>
-                <li order="11" data="28">
-                  <span lang="fa">Spike (right)</span>
-                </li>
-                <li order="12" data="29">
-                  <span lang="fa">Pique</span>
-                </li>
-                <li order="13" data="30">
-                  <span lang="fa">True diamond (left)</span>
-                </li>
-                <li order="14" data="31">
-                  <span lang="fa">True diamond (right)</span>
-                </li>
-                <li order="15" data="32">
-                  <span lang="fa">Real diamond</span>
-                </li>
-                <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                
               </ul>
               <div class="input">
                 <div class="label">
@@ -904,181 +1017,72 @@
             </div>
             <div class="group">
               <h2 id="topsHeader">
-                <span lang="fa">تیشرت</span>
+                <span lang="fa">لباس زیر</span>
               </h2>
               <div class="vetements-value" data-legend="">0</div>
               <ul class="hauts" data-link="All">
-                <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
-                <li order="0" data-torso-a="15" data-torso-b="0" data-neck-a="15" data-neck-b="0" data-undershirt-a="15" data-undershirt-b="0" data-bras="15" class="active">
-                  <span lang="fa">بدون تیشرت</span>
-                </li>
-                <li order="1" data-torso-a="9" data-torso-b="0" data-neck-a="0" data-neck-b="0" data-undershirt-a="0" data-undershirt-b="0" data-bras="1">
-                  <span lang="fa">Simple</span>
-                </li>
-                <li order="2" data-torso-a="70" data-torso-b="1" data-neck-a="17" data-neck-b="2" data-undershirt-a="106" data-undershirt-b="0" data-bras="8">
-                  <span lang="fa">Winter Bling Bling</span>
-                </li>
-                <li order="3" data-torso-a="73" data-torso-b="1" data-neck-a="0" data-neck-b="0" data-undershirt-a="15" data-undershirt-b="0" data-bras="0">
-                  <span lang="fa">Cato</span>
-                </li>
-                <li order="4" data-torso-a="4" data-torso-b="0" data-neck-a="31" data-neck-b="2" data-undershirt-a="0" data-undershirt-b="0" data-bras="1">
-                  <span lang="fa">Evening</span>
-                </li>
-                <li order="5" data-torso-a="6" data-torso-b="0" data-neck-a="0" data-neck-b="0" data-undershirt-a="2" data-undershirt-b="2" data-bras="1">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="6" data-torso-a="7" data-torso-b="2" data-neck-a="0" data-neck-b="0" data-undershirt-a="23" data-undershirt-b="1" data-bras="1">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="7" data-torso-a="76" data-torso-b="2" data-neck-a="31" data-neck-b="3" data-undershirt-a="74" data-undershirt-b="0" data-bras="1">
-                  <span lang="fa">Winter Envelope</span>
-                </li>
-                <li order="8" data-torso-a="31" data-torso-b="0" data-neck-a="12" data-neck-b="2" data-undershirt-a="31" data-undershirt-b="0" data-bras="1">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="9" data-torso-a="88" data-torso-b="0" data-neck-a="0" data-neck-b="0" data-undershirt-a="67" data-undershirt-b="0" data-bras="1">
-                  <span lang="fa">Cool</span>
-                </li>
-                <li order="10" data-torso-a="31" data-torso-b="3" data-neck-a="0" data-neck-b="0" data-undershirt-a="64" data-undershirt-b="0" data-bras="6">
-                  <span lang="fa">Relaxed</span>
-                </li>
-                <li order="11" data-torso-a="86" data-torso-b="0" data-neck-a="0" data-neck-b="0" data-undershirt-a="17" data-undershirt-b="0" data-bras="1">
-                  <span lang="fa">Skateboarder</span>
-                </li>
-                <li order="12" data-torso-a="105" data-torso-b="0" data-neck-a="0" data-neck-b="0" data-undershirt-a="15" data-undershirt-b="0" data-bras="0">
-                  <span lang="fa">Playa</span>
-                </li>
-                <li order="13" data-torso-a="93" data-torso-b="0" data-neck-a="0" data-neck-b="0" data-undershirt-a="59" data-undershirt-b="0" data-bras="0">
-                  <span lang="fa">Angry yellow cardigan</span>
-                </li>
-                <li order="14" data-torso-a="118" data-torso-b="7" data-neck-a="0" data-neck-b="0" data-undershirt-a="135" data-undershirt-b="14" data-bras="1">
-                  <span lang="fa">Simple Styler</span>
-                </li>
-                <li order="15" data-torso-a="113" data-torso-b="1" data-neck-a="0" data-neck-b="0" data-undershirt-a="15" data-undershirt-b="0" data-bras="6">
-                  <span lang="fa">Training</span>
-                </li>
-                <li order="16" data-torso-a="166" data-torso-b="1" data-neck-a="0" data-neck-b="0" data-undershirt-a="23" data-undershirt-b="0" data-bras="6">
-                  <span lang="fa">Brown leather jacket</span>
-                </li>
-                <li order="17" data-torso-a="217" data-torso-b="13" data-neck-a="0" data-neck-b="0" data-undershirt-a="24" data-undershirt-b="0" data-bras="6">
-                  <span lang="fa">Long coat</span>
-                </li>
-                <li order="18" data-torso-a="260" data-torso-b="20" data-neck-a="0" data-neck-b="0" data-undershirt-a="15" data-undershirt-b="0" data-bras="11">
-                  <span lang="fa">Polo</span>
-                </li>
-                <li order="19" data-torso-a="271" data-torso-b="10" data-neck-a="0" data-neck-b="0" data-undershirt-a="15" data-undershirt-b="0" data-bras="0">
-                  <span lang="fa">T-shirt Blaguers</span>
-                </li>
-                <li order="20" data-torso-a="107" data-torso-b="0" data-neck-a="0" data-neck-b="0" data-undershirt-a="5" data-undershirt-b="0" data-bras="0">
-                  <span lang="fa">The Chinese</span>
-                </li>
-                <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
               </ul>
+			  <div class="input">
+                <div class="label">
+                  <span lang="fa">رنگ لباس زیر</span>
+                </div>
+                <div class="label-value" name="tshirts_2" data-legend="0"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="0" type="range" class="tshirts_2" min="0" max="0" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
             </div>
+			
+            <div class="group">
+              <h2 id="topsHeader">
+                <span lang="fa">لباس رو</span>
+              </h2>
+              <div class="vetements-value" data-legend="">0</div>
+              <ul class="torso_1" data-link="All">
+              </ul>
+			  <div class="input">
+                <div class="label">
+                  <span lang="fa">رنگ لباس رو</span>
+                </div>
+                <div class="label-value" name="torso_2" data-legend="0"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="0" type="range" class="torso_2" min="0" max="0" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+            </div>
+			
+	
+            <div class="group">
+              <h2 id="topsHeader">
+                <span lang="fa">بازو</span>
+              </h2>
+              <div class="vetements-value" data-legend="">0</div>
+              <ul class="arms_1" data-link="All">
+              </ul>
+			  <div class="input">
+                <div class="label">
+                  <span lang="fa">بازو 2</span>
+                </div>
+                <div class="label-value" name="arms_2" data-legend="0"></div>
+                <div class="type-range">
+                  <a href="#" class="arrow arrow-left">&nbsp;</a>
+                  <input value="0" type="range" class="arms_2" min="0" max="0" />
+                  <a href="#" class="arrow arrow-right">&nbsp;</a>
+                </div>
+              </div>
+            </div>
+			
             <div class="group">
               <h2 id="jeansHeader">
                 <span lang="fa">شلوار</span>
               </h2>
               <div class="vetements-value" data-legend="">0</div>
               <ul class="pantalons" data-link="All">
-                <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
-                <li order="0" data="61" class="active">
-                  <span lang="fa">بدون شلوار</span>
-                </li>
-                <li order="1" data="0">
-                  <span lang="fa">Jeans regular</span>
-                </li>
-                <li order="2" data="1">
-                  <span lang="fa">Jeans regular washed out</span>
-                </li>
-                <li order="3" data="2">
-                  <span lang="fa">Jeans regular law</span>
-                </li>
-                <li order="4" data="3">
-                  <span lang="fa">the sport Short</span>
-                </li>
-                <li order="5" data="4">
-                  <span lang="fa">Jogging</span>
-                </li>
-                <li order="6" data="5">
-                  <span lang="fa">skinny Jeans</span>
-                </li>
-                <li order="7" data="7">
-                  <span lang="fa">large Jogging</span>
-                </li>
-                <li order="8" data="9">
-                  <span lang="fa">Large pants</span>
-                </li>
-                <li order="9" data="10">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="10" data="12">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="11" data="14">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="12" data="15">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="13" data="20">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="14" data="24">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="15" data="26">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="16" data="28">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="17" data="42">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="18" data="48">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="19" data="49">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="20" data="54">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="21" data="55">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="22" data="60">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="23" data="71">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="24" data="75">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="25" data="76">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="26" data="78">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="27" data="82">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="28" data="86">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="29" data="88">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="30" data="100">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <li order="31" data="89">
-                  <span lang="fa">Unnamed</span>
-                </li>
-                <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                
               </ul>
               <div class="input">
                 <div class="label">
@@ -1098,80 +1102,7 @@
               </h2>
               <div class="vetements-value" data-legend="">0</div>
               <ul class="chaussures" data-link="All">
-                <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
-                <li order="0" data="34" class="active">
-                  <span lang="fa">بدون کفش</span>
-                </li>
-                <li order="1" data="0">
-                  <span lang="fa">Baskets EE</span>
-                </li>
-                <li order="2" data="1">
-                  <span lang="fa">Baskets Etny</span>
-                </li>
-                <li order="3" data="3">
-                  <span lang="fa">Sailor shoes</span>
-                </li>
-                <li order="4" data="48">
-                  <span lang="fa">Converse</span>
-                </li>
-                <li order="5" data="49">
-                  <span lang="fa">Converse</span>
-                </li>
-                <li order="6" data="5">
-                  <span lang="fa">Tongs</span>
-                </li>
-                <li order="7" data="6">
-                  <span lang="fa">Slides and socks</span>
-                </li>
-                <li order="8" data="7">
-                  <span lang="fa">Baskets</span>
-                </li>
-                <li order="9" data="9">
-                  <span lang="fa">Baskets</span>
-                </li>
-                <li order="10" data="10">
-                  <span lang="fa">Dress shoes</span>
-                </li>
-                <li order="11" data="12">
-                  <span lang="fa">Timberland</span>
-                </li>
-                <li order="12" data="15">
-                  <span lang="fa">Dress shoes</span>
-                </li>
-                <li order="13" data="16">
-                  <span lang="fa">Tongs</span>
-                </li>
-                <li order="14" data="20">
-                  <span lang="fa">Dress shoes</span>
-                </li>
-                <li order="15" data="24">
-                  <span lang="fa">Rangers</span>
-                </li>
-                <li order="16" data="27">
-                  <span lang="fa">damaged Rangers</span>
-                </li>
-                <li order="17" data="28">
-                  <span lang="fa">Fashion à pics</span>
-                </li>
-                <li order="18" data="31">
-                  <span lang="fa">Sneakers</span>
-                </li>
-                <li order="19" data="36">
-                  <span lang="fa">Heels</span>
-                </li>
-                <li order="20" data="42">
-                  <span lang="fa">Sneakers without lace</span>
-                </li>
-                <li order="21" data="57">
-                  <span lang="fa">Baskets</span>
-                </li>
-                <li order="22" data="75">
-                  <span lang="fa">High sneakers</span>
-                </li>
-                <li order="23" data="77">
-                  <span lang="fa">Neon sneakers</span>
-                </li>
-                <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                
               </ul>
               <div class="input">
                 <div class="label">
@@ -1191,29 +1122,7 @@
               </h2>
               <div class="vetements-value" data-legend="">0</div>
               <ul class="montre" data-link="All">
-                <button type="button" class="arrow arrowvetement-left">&nbsp;</button>
-                <li order="0" data="-1" class="active">
-                  <span lang="fa">بدون ساعت</span>
-                </li>
-                <li order="1" data="0">
-                  <span lang="fa">Classic</span>
-                </li>
-                <li order="2" data="1">
-                  <span lang="fa">Connected</span>
-                </li>
-                <li order="3" data="3">
-                  <span lang="fa">Sport</span>
-                </li>
-                <li order="4" data="4">
-                  <span lang="fa">Gold plated</span>
-                </li>
-                <li order="5" data="8">
-                  <span lang="fa">Gold</span>
-                </li>
-                <li order="6" data="10">
-                  <span lang="fa">Metallic</span>
-                </li>
-                <button type="button" class="arrow arrowvetement-right">&nbsp;</button>
+                
               </ul>
               <div class="input">
                 <div class="label">
@@ -1258,6 +1167,87 @@
     </div>
   </div>
   <!-- JS Scripts -->
+  <script type="text/javascript"> 
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون کلاه</span></li>';
+	for (i = 1; i <= 151; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">کلاه ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.chapeaux').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون عینک</span></li>';
+	for (i = 1; i <= 33; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">عینک ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.lunettes').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون گوشواره</span></li>';
+	for (i = 1; i <= 40; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">گوشواره ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.oreilles').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون گوشواره</span></li>';
+	for (i = 1; i <= 40; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">گوشواره ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.oreilles').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون لباس زیر</span></li>';
+	for (i = 1; i <= 177; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">لباس زیر ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.hauts').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون لباس رو</span></li>';
+	for (i = 1; i <= 361; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">لباس رو ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.torso_1').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون بازو</span></li>';
+	for (i = 1; i <= 239; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">بازو ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.arms_1').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون شلوار</span></li>';
+	for (i = 1; i <= 139; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">شلوار ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.pantalons').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون کفش</span></li>';
+	for (i = 1; i <= 101; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">کفش ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.chaussures').html(output1);
+	
+	output1 = '<button type="button" class="arrow arrowvetement-left">&nbsp;</button><li order="0" data="0" class="active"><span lang="fa">بدون ساعت</span></li>';
+	for (i = 1; i <= 29; i++) {
+		output1 = output1 + '<li order="' + (i - 1) + '" data="' + i + '"><span lang="fa">ساعت ' + i + '</span></li>';
+	}
+	
+	output1 = output1 + '<button type="button" class="arrow arrowvetement-right">&nbsp;</button>';
+	$('.montre').html(output1);
+  </script>
   <script src="js/front.js" type="text/javascript"></script>
   <script src="js/script.js" type="text/javascript"></script>
   <script type="text/javascript">
@@ -1265,17 +1255,9 @@
       var myDiv = document.getElementById("formSkinCreator");
       myDiv.scrollTop = 0;
     }
-
-    function myFunction(val) {
-      if (val == 0) {
-        document.getElementById("genderMale").style.display = "block";
-        document.getElementById("genderFemale").style.display = "none";
-      } else {
-        document.getElementById("genderMale").style.display = "none";
-        document.getElementById("genderFemale").style.display = "block";
-      }
-    }
   </script>
 </body>
 
 </html>
+
+
