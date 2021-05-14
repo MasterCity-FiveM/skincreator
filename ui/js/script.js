@@ -131,7 +131,7 @@ $(document).ready(function() {
         value: 10
       }));
     }
-    if (e.which == 101) { // E pressed
+    if (e.which == 100) { // D pressed
       $.post('http://skincreator/rotateleftheading', JSON.stringify({
         value: 10
       }));

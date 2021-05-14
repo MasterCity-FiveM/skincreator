@@ -48,6 +48,10 @@ RegisterNUICallback(
 		dad = tonumber(data.dad)
 		mum = tonumber(data.mum)
 		gender = tonumber(data.gender)
+		if gender == nil then
+			gender = 0
+		end
+		
 		skin = tonumber(data.skinMix) / 10
 		face = tonumber(data.shapeMix) / 10
 		eyecolor = tonumber(data.eyecolor)
@@ -136,7 +140,6 @@ RegisterNUICallback(
 			local prop_earrings_text = GetPedPropTextureIndex(ped, 2)
 			local prop_watches = GetPedPropIndex(ped, 6)
 			local prop_watches_text = GetPedPropTextureIndex(ped, 6)
-
 			local skin_data = {
 				["sex"] = gender,
 				["face"] = face,
@@ -205,6 +208,7 @@ RegisterNUICallback(
 				["chin_hole"] = chin_hole,
 				["neck_thick"] = neck_thick,
 			}
+			
 			TriggerServerEvent("esx_skin:save", skin_data)
 			TriggerEvent('skinchanger:loadSkin', skin_data)
 			Citizen.Wait(1000)
