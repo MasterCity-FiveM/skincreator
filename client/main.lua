@@ -52,8 +52,22 @@ RegisterNUICallback(
 			gender = 0
 		end
 		
-		skin = tonumber(data.skinMix) / 10
-		face = tonumber(data.shapeMix) / 10
+		if tonumber(data.skinMix) == nil and gender == 0 then
+			skin = 0
+		elseif tonumber(data.skinMix) == nil and gender == 1 then
+			skin = 1
+		else
+			skin = tonumber(data.skinMix) / 10
+		end
+		
+		if tonumber(data.shapeMix) == nil and gender == 0 then
+			face = 0
+		elseif tonumber(data.shapeMix) == nil and gender == 1 then
+			face = 1
+		else
+			face = tonumber(data.shapeMix) / 10
+		end
+		
 		eyecolor = tonumber(data.eyecolor)
 		acne = tonumber(data.acne)
 		skinproblem = tonumber(data.skinproblem)
@@ -84,17 +98,78 @@ RegisterNUICallback(
 		arms_1 = tonumber(data.arms_1)
 		arms_2 = tonumber(data.arms_2)
 		
-		nose_1 = ((tonumber(data.nose_1) - 10) / 10)
-		nose_2 = ((tonumber(data.nose_2) - 10) / 10)
-		nose_3 = ((tonumber(data.nose_3) - 10) / 10)
-		nose_4 = ((tonumber(data.nose_4) - 10) / 10)
-		nose_5 = ((tonumber(data.nose_5) - 10) / 10)
-		nose_6 = ((tonumber(data.nose_6) - 10) / 10)
-		eyebrows_5 = ((tonumber(data.eyebrows_5) - 10) / 10)
-		eyebrows_6 = ((tonumber(data.eyebrows_6) - 10) / 10)
-		cheeks_1 = ((tonumber(data.cheeks_1) - 10) / 10)
-		cheeks_2 = ((tonumber(data.cheeks_2) - 10) / 10)
-		cheeks_3 = ((tonumber(data.cheeks_3) - 10) / 10)
+		if tonumber(data.nose_1) == nil or tonumber(data.nose_1) == 0 then
+			nose_1 = 0.5
+		else
+			nose_1 = ((tonumber(data.nose_1) - 10) / 10)
+		end
+		
+		if tonumber(data.nose_2) == nil or tonumber(data.nose_2) == 0 then
+			nose_2 = 0.5
+		else
+			nose_2 = ((tonumber(data.nose_2) - 10) / 10)
+		end
+		
+		if tonumber(data.nose_3) == nil or tonumber(data.nose_3) == 0 then
+			nose_3 = 0.5
+		else
+			nose_3 = ((tonumber(data.nose_3) - 10) / 10)
+		end
+		
+		if tonumber(data.nose_4) == nil or tonumber(data.nose_4) == 0 then
+			nose_4 = 0.5
+		else
+			nose_4 = ((tonumber(data.nose_4) - 10) / 10)
+		end
+		
+		if tonumber(data.nose_5) == nil or tonumber(data.nose_5) == 0 then
+			nose_5 = 0.5
+		else
+			nose_5 = ((tonumber(data.nose_5) - 10) / 10)
+		end
+		
+		if tonumber(data.nose_6) == nil or tonumber(data.nose_6) == 0 then
+			nose_6 = 0.5
+		else
+			nose_6 = ((tonumber(data.nose_6) - 10) / 10)
+		end
+		
+		if tonumber(data.nose_6) == nil or tonumber(data.nose_6) == 0 then
+			nose_6 = 0.5
+		else
+			nose_6 = ((tonumber(data.nose_6) - 10) / 10)
+		end
+		
+		if tonumber(data.eyebrows_5) == nil or tonumber(data.eyebrows_5) == 0 then
+			eyebrows_5 = 0.5
+		else
+			eyebrows_5 = ((tonumber(data.eyebrows_5) - 10) / 10)
+		end
+		
+		if tonumber(data.eyebrows_6) == nil or tonumber(data.eyebrows_6) == 0 then
+			eyebrows_6 = 0.5
+		else
+			eyebrows_6 = ((tonumber(data.eyebrows_6) - 10) / 10)
+		end
+		
+		if tonumber(data.cheeks_1) == nil or tonumber(data.cheeks_1) == 0 then
+			cheeks_1 = 0.5
+		else
+			cheeks_1 = ((tonumber(data.cheeks_1) - 10) / 10)
+		end
+		
+		if tonumber(data.cheeks_2) == nil or tonumber(data.cheeks_2) == 0 then
+			cheeks_2 = 0.5
+		else
+			cheeks_2 = ((tonumber(data.cheeks_2) - 10) / 10)
+		end
+		
+		if tonumber(data.cheeks_3) == nil or tonumber(data.cheeks_3) == 0 then
+			cheeks_3 = 0.5
+		else
+			cheeks_3 = ((tonumber(data.cheeks_3) - 10) / 10)
+		end
+		
 		eye_open = ((tonumber(data.eye_open) - 10) / 10)
 		lips_thick = ((tonumber(data.lips_thick) - 10) / 10)
 		jaw_1 = ((tonumber(data.jaw_1) - 10) / 10)
@@ -104,6 +179,7 @@ RegisterNUICallback(
 		chin_width = ((tonumber(data.chin_width) - 10) / 10)
 		chin_hole = ((tonumber(data.chin_hole) - 10) / 10)
 		neck_thick = ((tonumber(data.neck_thick) - 10) / 10)
+				
 				
 		pants = tonumber(data.pants)
 		pants_texture = tonumber(data.pants_texture)
